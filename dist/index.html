@@ -39,8 +39,10 @@
         <link rel="stylesheet" href="assets/css/default.css">
         <!-- responsive Stylesheet -->
         <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/taras-d/images-grid/src/images-grid.min.css">
 
-    </head>
+
+</head>
     <body style="background: #090909;">
 
         <!-- search Popup -->
@@ -203,17 +205,13 @@
                                     <div class="section-title pb-30">
                                         <h3 class="sub-title">Bio Graphy</h3>
                                         <h2 class="title">Meet the 6'3" model</h2>
-                                        <p class="pt-30">Malaica Kokane is a supermodel, innovative thinker, and a leader.<br>
-                                            This 24 years leggy lass comes from the city of dreams, Mumbai.<br>
-                                            At such a young age, she already has a lot of achievements under her sleeve. Standing tall at 192 cms, Malaica has been a national level basketball player and a national level rhythmic gymnast.
+                                        <p class="pt-30">Malaica Kokane is a 24 year old Indian model/Influencer living in the United Kingdom/India.
                                             <br>
-                                            This beauty with legs for days has participated in reality shows like India's Next Top Model S4, The Anti Social Network & Pyaar Tune Kya Kiya.
+                                            Standing tall at 190.5 cms, Malaica has been a part of reality shows including India's Next Top Model S4, The Antisocial Network and Pyaar Tune Kya Kiya.
                                             <br>
-                                            She has walked as a ramp model for Bombay Time's Fashion Week (designer Rohit Verma), INIFD Launchpad for Lakme Fashion Week, Schwarzkopf, Mod Art show, Pearl Academy, and Archana Kochhar X Swarovski.
+                                            She has walked the ramp for various designers and modelled for numerous brands including Bombay Times Fashion Week 2021 for designer Rohit Verma, INIFD Launchpad for Lakme Fashion Week, Zeiss, Schwarzkopf, Rohit Anand Salon, Livon Serum, The Arab Crab and Eye Candy.
                                             <br>
-                                            Malaica has modeled for brands such as Ziess, The Arab Crab, Eyecandy, The School of Makeup & Hair, Rohit Anand Salon, Livon Serum.
-                                            <br>
-                                            Currently, she is on a mission to transform the consultancy and management space.
+                                            Malaica has also dabbled in various physical pursuits as she is a national level Basketball player, Rhythmic Gymnast and an Athlete. Currently, she is working in London in the corporate sector.
                                         </p>
                                     </div>
                                 </div>
@@ -368,6 +366,9 @@
         </section>
         <!-- skill area end here  -->
         <!-- service area start here  -->
+
+        <div id="imgs"></div>
+
         <section class="service-area padding-top-120 padding-bottom-70">
             <div class="container">
                 <div class="row">
@@ -781,6 +782,7 @@
 
         <!-- jquery -->
         <script src="assets/js/jquery-2.2.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/taras-d/images-grid/src/images-grid.min.js"></script>
         <!-- popper -->
         <script src="assets/js/popper.min.js"></script>
         <!-- bootstrap -->
@@ -805,6 +807,21 @@
         <script src="assets/js/jquery.lineProgressbar.js"></script>
         <!-- main js -->
         <script src="assets/js/main.js"></script>
+
+        <script>
+            $('#imgs').imagesGrid({
+                images: ['assets/img/instagram/1.jpg',
+                    'assets/img/instagram/2.jpg',
+                    'assets/img/instagram/3.jpg',
+                    'assets/img/instagram/4.jpg',
+                    'assets/img/instagram/5.jpg',
+                    'assets/img/instagram/6.jpg',
+                    'assets/img/instagram/7.jpg',
+                    'assets/img/instagram/8.jpg',
+
+                ]
+            });
+        </script>
 
     </body>
 
