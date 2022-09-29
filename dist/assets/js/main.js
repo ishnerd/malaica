@@ -5,11 +5,11 @@
 
         /**-----------------------------
          *  Navbar fix
-         * ---------------------------*/  
+         * ---------------------------*/
         $(document).on('click','.navbar-area .navbar-nav li.menu-item-has-children>a',function(e){
             e.preventDefault();
-        }) 
-        
+        })
+
 
         $(".togglebar").on('click', function(){
             $(".togglebar").toggleClass('active');
@@ -32,11 +32,11 @@
             focusOnSelect: true,
         });
 
-       
+
         /*---------------------------
             Testimonial carousel
         ---------------------------*/
-        
+
         $(".testimonial-slide").owlCarousel({
             loop: true,
             items: 2,
@@ -58,7 +58,7 @@
         /*---------------------------
             instagram carousel
         ---------------------------*/
-        
+
         $(".instagram-slider").owlCarousel({
             loop: true,
             items: 8,
@@ -123,11 +123,11 @@
          $('.counting').each(function() {
              var $this = $(this),
              countTo = $this.attr('data-count');
-           
+
              $({ countNum: $this.text()}).animate({
                  countNum: countTo
              },
- 
+
              {
                  duration: 2000,
                  easing:'linear',
@@ -137,7 +137,7 @@
                  complete: function() {
                      $this.text(this.countNum);
                  }
-             });  
+             });
          });
 
          /*------------------
@@ -186,7 +186,7 @@
         });
 
         /*-------------------------------
-            Portfolio filter 
+            Portfolio filter
         ---------------------------------*/
         var $Container = $('.portfolio-masonry');
         if ($Container.length > 0) {
@@ -209,8 +209,8 @@
                 $(this).addClass('active');
             });
         }
-        
-        
+
+
         /*----------------------
             Search Popup
         -----------------------*/
@@ -228,7 +228,7 @@
         bodyOvrelay.addClass('active');
         });
 
-        
+
 
     });
 
@@ -237,7 +237,7 @@
     var lastScrollTop = '';
 
     $(window).on('scroll', function () {
-        
+
         //back to top show/hide
        var ScrollTop = $('.back-to-top');
        if ($(window).scrollTop() > 1000) {
@@ -253,11 +253,11 @@
         var mainMenuTop = $('.navbar-area');
         if ($(window).scrollTop() > 1000) {
             if (st > lastScrollTop) {
-                // hide sticky menu on scrolldown 
+                // hide sticky menu on scrolldown
                 mainMenuTop.removeClass('nav-fixed');
-                
+
             } else {
-                // active sticky menu on scrollup 
+                // active sticky menu on scrollup
                 mainMenuTop.addClass('nav-fixed');
             }
 
@@ -266,9 +266,9 @@
         }
 
         lastScrollTop = st;
-       
+
     });
-           
+
 
     $(window).on('load',function(){
 
@@ -292,6 +292,42 @@
             $("#preloader").fadeOut(2000);
         });
 
+    });
+
+    // Init empty gallery array
+    var container = [];
+
+    // Loop over gallery items and push it to the array
+    $('#gallery').find('figure').each(function(){
+        var $link = $(this).find('a'),
+            item = {
+                src: $link.attr('href'),
+                w: $link.data('width'),
+                h: $link.data('height'),
+                title: $link.data('caption')
+            };
+        container.push(item);
+    });
+
+    console.log({container})
+
+    // Define click event on gallery item
+    $('#gallery a').click(function(event){
+
+        // Prevent location change
+        event.preventDefault();
+
+        // Define object and gallery options
+        var $pswp = $('.pswp')[0],
+            options = {
+                index: $(this).data('index'),
+                bgOpacity: 0.85,
+                showHideOpacity: true
+            };
+
+        // Initialize PhotoSwipe
+        var gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, container, options);
+        gallery.init();
     });
 
 

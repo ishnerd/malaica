@@ -1176,7 +1176,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 /*---------------------
-    ## Breadcumb 
+    ## Breadcumb
 ----------------------*/
 .breadcrumb-area {
   padding: 230px 0 162px;
@@ -2023,7 +2023,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 /*----------------------------------------------
-    # Nav bar 
+    # Nav bar
 ----------------------------------------------*/
 .navbar.navbar-area.white .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.50)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -2818,7 +2818,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 /*---------------------
-    ## About Area 
+    ## About Area
 ----------------------*/
 .about-area {
   background: #f6f6f6;
@@ -3291,7 +3291,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 /*-----------------------------
-    ## Testimonial Area 
+    ## Testimonial Area
 -----------------------------*/
 .testimonial-area .testimonial-slide {
   position: relative;
@@ -4368,4 +4368,46 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   width: 100%;
   height: 600px;
   border: 0;
+}
+
+ /*new css*/
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
 }
