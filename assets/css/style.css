@@ -2717,7 +2717,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to right, #000000, rgba(0, 0, 0, 0));
+  background: #000;
+  opacity: 0.88;
   top: 0;
   left: 0;
 }
